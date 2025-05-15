@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./main.css" rel="stylesheet"/>
+    <script src="./main.mjs" type="module"></script>
+    <title>App</title>
+</head>
+<body>
+
+    <div id="player2" class="player">
+
+        <div id="p2hand" class="hand"></div>
+
+        <div class="controls">
+            <div class="stats"></div>
+        </div>
+
+    </div>
+
+
+    <div id="combat">
+
+        <div class="board play">
+
+            <div class="pstage stage player1 card"></div>
+
+            <div class="pstage stage player1 card"></div>
+
+            VS.
+
+            <div class="estage stage player2 card"></div>
+
+            <div class="estage stage player2 card"></div>
+
+        </div>
+
+        <div class="log play">
+
+            <div class="results">
+
+                <h1 id="rbanner">RESULTS</h1>
+
+                <span id="rb1" class="resultbox">0</span>
+
+                <span id="rb2" class="resultbox">0</span>
+
+            </div>
+
+        </div>
+
+        <div class="scoreboard play">
+
+            <p id="p1score" class="score">0</p>
+            <p>-</p>
+            <p id="p2score" class="score">0</p>
+
+        </div>
+
+    </div>
+
+
+    <div id="player1" class="player">
+
+        <div class="controls">
+            <button id="battle" class="panel">BATTLE!</button>
+
+            <button id="draw" class="panel" >DRAW</button>
+            <div class="stats"></div>
+        </div>
+
+        <div id="p1hand" class="hand"></div>
+
+    </div>
+    
+</body>
+</html>

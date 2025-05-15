@@ -1,0 +1,86 @@
+:root {
+    --background: rgba(70,70,70,70);
+    --light-background: rgba(70,70,70,10);
+    --smoke: rgb(50, 50, 50);
+    --p1: lightblue;
+    --p2: pink }
+
+body { margin: none; padding: none; overflow: hidden; font-family: Impact }
+
+#battle { background-image: linear-gradient(to top, red, orange); } #draw { background-image: linear-gradient(to top, blue, cyan); }
+
+.panel { 
+    padding: 20px 40px; 
+    font-family: impact; 
+    border-radius: 20px; 
+    color: white; 
+    letter-spacing: 2px; 
+    font-size: 70px }
+
+#battle:disabled { background-image: linear-gradient(to top, grey, white) } #draw:disabled { background-image: linear-gradient(to top, grey, white) }
+
+.panel:disabled:hover { cursor: not-allowed }
+
+.panel:hover { cursor: pointer }
+
+.card { 
+    border: 2px solid black;
+    width: 70px; 
+    height: 100px ; 
+    display: flex; 
+    justify-content: center;
+    align-items: center }
+
+.card.stage { padding: 10px } .pstage { border: var(--p1) 1px solid } .estage { border: var(--p2) 1px solid }
+
+#combat { 
+    background-color: var(--background); 
+    height: 20vh; 
+    width: 100vw; 
+    top: 40vh; 
+    position: absolute; 
+    left: 0; 
+    display: flex; 
+    justify-content: center; 
+    letter-spacing: 2px }
+
+.controls { height: 20vh; background-color: var(--background); display: flex; justify-content: center; align-items: center }
+
+#p1hand { background-color: var(--p1) } #p2hand { background-color: var(--p2) }
+
+#p1score { color: var(--p1) } #p2score { color: var(--p2) } .score { font-weight: bold; font-size: 100px }
+
+.hand { width: 100vw; height: 20vh; display: flex; justify-content: center; align-items: center }
+
+.hand .card { margin: 0px 50px }
+
+.play { 
+    border: 1px solid white;
+    width: 33vw;
+    margin: 5px;
+    position: relative;
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center }
+
+.player {
+    width: 100vw;
+    height: 40vh;
+    box-sizing: border-box;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    background-color: var(--background) }
+
+#player2 { top: 0 } #player1 { bottom: 0 }
+
+#rbanner { color: black; -webkit-text-stroke: 1px var(--smoke) }
+
+#rb1 { border-bottom: 1px solid var(--p1); color: var(--p1) }
+
+#rb2 { border-bottom: 1px solid var(--p2); color: var(--p2) }
+
+.results { display: flex; justify-content: space-between; align-items: center; width: 70%; opacity: 0; transition: all 500ms ease }
+
+.resultbox { background-color: var(--smoke); width: 60px; height: 75px; display: flex; justify-content: center; align-items: center }
+
