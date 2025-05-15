@@ -50,11 +50,11 @@ export function createCard(color) {
 
 }
 
-export function addCard(playerHand = 'p1hand') {
+export async function addCard(playerHand = 'p1hand') {
 
     var hand = document.getElementById(playerHand);
 
-    if (hand.children.length < 6) {
+    if (hand.children.length < 7) {
 
         var newCard = createCard();
     
@@ -79,9 +79,15 @@ export function addCard(playerHand = 'p1hand') {
 }
 
 export function addMany(n,player) {
+
     if (typeof n != 'number') { return }
+
     while (n > 0) {
+
         player == 'p1' ? addCard() : player == 'p2' ? addCard('p2hand') : null;
+
         n--;
+
     }
+    
 }

@@ -1,4 +1,4 @@
-import { createCard, addCard } from "./assets.js";
+import { createCard, addCard, handleStage } from "./assets.js";
 import { handleStageCPU } from "./cpu.js";
 
 const playerstages = document.querySelectorAll('.pstage'); const enemystages = document.querySelectorAll('.estage');
@@ -17,15 +17,45 @@ var [p1score,p2score] = [document.getElementById('p1score'),document.getElementB
 
 battle.addEventListener("click", () => { handleBattle() });
 
-function cleanStage() { stages.forEach(e => e.replaceChildren()); battle.disabled = false; draw.disabled = false; results.style.opacity = 0 }
+draw.addEventListener("click", () => { handleDraw() });
+
+function cleanStage() { stages.forEach(e => e.replaceChildren()); battle.disabled = false; draw.disabled = false; results.style.opacity = 0 };
+
+function colorEngine([...p1cards],[...p2cards]) {
+
+    var colorList = new Set();
+
+    function colorDiscover(list) {
+        list.forEach(e => e.forEach(f => colorList.add(f.style.backgroundColor)));
+        console.log(colorList.values()); 
+        list.forEach(e => {
+            e.forEach(f => {
+                f.style.backgroundColor == 'red' && colorList.has('purple') ? f.innerHTML = 0 :
+                f.style.backgroundColor == 'skyblue' && colorList.has('red') ? f.innerHTML = 0 :
+                f.style.backgroundColor == 'lime' && colorList.has('skyblue') ? f.innerHTML = 0 :
+                f.style.backgroundColor == 'gold' && colorList.has('lime') ? f.innerHTML = 0 :
+                f.style.backgroundColor == 'purple' && colorList.has('gold') ? f.innerHTML = 0 : null
+            })
+        })
+    }
+
+    colorDiscover([...p1cards,...p2cards])
+
+    return [p1cards,p2cards];
+
+}
 
 function calculateBattle() {
 
-    var[p1,p2] = [0,0];
+    var[p1,p2] = [0,0]; var[playerq,enemyq] = [[],[]];
 
-    playerstages.forEach(e => e.children.length ? p1 += Math.abs(e.children[0].innerHTML) : null);
+    playerstages.forEach(e => e.children.length ? playerq.push(e.children[0]) : null);
 
-    enemystages.forEach(e => e.children.length ? p2 += Math.abs(e.children[0].innerHTML) : null);
+    enemystages.forEach(e => e.children.length ? enemyq.push(e.children[0]) : null);
+
+    colorEngine([playerq],[enemyq])[0].forEach(e => { e.forEach(f => p1 += Number(f.innerHTML)) });
+
+    colorEngine([playerq],[enemyq])[1].forEach(e => { e.forEach(f => p2 += Number(f.innerHTML)) });
 
     resultbox1.innerHTML = `+ ${p1}`; resultbox2.innerHTML = `+ ${p2}`;
 
@@ -52,5 +82,17 @@ export async function handleBattle() {
     calculateBattle();
 
     nextRound();
+
+}
+
+export async function handleDraw() {
+
+    try { playerstages.forEach(e => [e].forEach(f => { handleStage(f.children[0]) })) }
+
+    catch {}
+
+    finally { addCard(); }
+
+    handleBattle();
 
 }

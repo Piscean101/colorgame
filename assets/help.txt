@@ -1,10 +1,11 @@
 to-do: 
-+ card interaction engine
-+ card draw logic
++ double points for matching colors
++ cpu draw-play logic 
 + disable all clicks on page when calculating
 + round number counter
 + css for facedown cards
 + win/lose page
++ help page
 
 ** WELCOME **
 
