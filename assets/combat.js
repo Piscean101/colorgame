@@ -19,7 +19,13 @@ battle.addEventListener("click", () => { handleBattle() });
 
 draw.addEventListener("click", () => { handleDraw() });
 
-function cleanStage() { stages.forEach(e => e.replaceChildren()); battle.disabled = false; draw.disabled = false; results.style.opacity = 0 };
+function cleanStage() { 
+    stages.forEach(e => e.replaceChildren()); 
+    battle.disabled = false; 
+    draw.disabled = false; 
+    results.style.opacity = 0;
+    document.querySelector('body').style.pointerEvents = 'auto';
+};
 
 function colorEngine([...p1cards],[...p2cards]) {
 
@@ -74,7 +80,7 @@ export async function nextRound() {
 
 export async function handleBattle() {
 
-    battle.disabled = true; draw.disabled = true;
+    battle.disabled = true; draw.disabled = true; document.querySelector('body').style.pointerEvents = 'none';
 
     results.style.opacity = 100;
 

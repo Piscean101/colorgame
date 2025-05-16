@@ -1,5 +1,4 @@
 to-do: 
-+ double points for matching colors
 + disable all clicks on page when calculating
 + css for facedown cards
 + round number counter
