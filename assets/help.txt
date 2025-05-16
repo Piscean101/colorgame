@@ -1,5 +1,4 @@
 to-do: 
-+ disable all clicks on page when calculating
 + css for facedown cards
 + round number counter
 + win/lose page

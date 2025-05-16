@@ -26,7 +26,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 .card { 
     border: 2px solid black;
     min-width: 70px; 
-    height: 100px ; 
+    height: 100px; 
     display: flex; 
     justify-content: center;
     align-items: center }
@@ -120,7 +120,6 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
     .score {
         width: 50px;
-        font-size: 30px;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -143,6 +142,20 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 }
 
 @media only screen and (max-width: 400px) {
+    #p1hand {
+        position: absolute;
+        bottom: 0;
+    }
+    .hand { 
+        height: 15vh;
+    }
+    .controls {
+        height: 15vh;
+        position: relative;
+    }
+    #pcontrols {
+        top: 20%;
+    }
     .log {
         width: 100vw;
     }
@@ -152,6 +165,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
     .card {
         min-width: 35px;
+        height: 70px;
     }
     .score {
         right: 150%;
