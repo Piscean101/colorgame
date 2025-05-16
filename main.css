@@ -109,7 +109,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 700px) {
     .board {
         position: relative;
         left: 10%;
@@ -141,13 +141,13 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
 }
 
-@media only screen and (max-width: 400px) {
-    #p1hand {
+@media only screen and (max-width: 500px) {
+    #p1hand{
         position: absolute;
         bottom: 0;
     }
     .hand { 
-        height: 15vh;
+        height: 10vh;
     }
     .controls {
         height: 15vh;
