@@ -27,7 +27,6 @@ function colorEngine([...p1cards],[...p2cards]) {
 
     function colorDiscover(list) {
         list.forEach(e => e.forEach(f => colorList.add(f.style.backgroundColor)));
-        console.log(colorList.values()); 
         list.forEach(e => {
             e.forEach(f => {
                 f.style.backgroundColor == 'red' && colorList.has('purple') ? f.innerHTML = 0 :
