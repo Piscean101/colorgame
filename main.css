@@ -147,10 +147,10 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         bottom: 0;
     }
     .hand { 
-        height: 10vh;
+        max-height: 10vh;
     }
     .controls {
-        height: 15vh;
+        max-height: 10vh;
         position: relative;
     }
     #pcontrols {

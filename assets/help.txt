@@ -3,6 +3,7 @@ to-do:
 + round number counter
 + win/lose page
 + help page
++ mobile queries
 
 ** WELCOME **
 
