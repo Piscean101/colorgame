@@ -25,6 +25,7 @@ function cleanStage() {
     draw.disabled = false; 
     results.style.opacity = 0;
     document.querySelector('body').style.pointerEvents = 'auto';
+    p1score.innerHTML >= 100 ? alert('You win! Wanna play again?') : p1score.innerHTML >= 100 ? alert('You lose! Better luck next time') : null;
 };
 
 function colorEngine([...p1cards],[...p2cards]) {

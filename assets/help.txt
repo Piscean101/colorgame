@@ -9,6 +9,9 @@ to-do:
 
 HOW TO PLAY
 
+Player (You) is the blue side
+Opponent (CPU) is the pink side
+
 At the beginning of each round, after drawing your first card for the turn, you and your opponent may choose up to 2 cards to add to the stage 
 from your hand. Once your selection is complete, choose "BATTLE!" to reveal your opponent's staged cards and calculate the results.
 
@@ -25,6 +28,8 @@ Blue counters Green
 Green counters Yellow
 Yellow counters Purple
 Purple counters Red
+
+Wild cards are special rare cards with higher values than regular cards. Wild cards cannot counter or be countered by other colors. 
 
 CALCULATION
 

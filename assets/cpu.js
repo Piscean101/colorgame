@@ -13,6 +13,8 @@ export async function handleStageCPU() {
         cpuhand.children.length >= 6 ? decision = 'play' : decision = 'draw';
         
         decision == 'draw' && odds > 0.5 ? decision = 'draw' : decision = 'play';
+
+        cpuhand.children.length <= 2 ? decision = 'draw' : decision = 'play';
         
         return decision;
         

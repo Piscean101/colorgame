@@ -50,15 +50,37 @@ export function createCard(color) {
 
 }
 
+export function wildCard() {
+
+    let result;
+
+    let chances = Math.random()*10;
+
+    chances <= 0.5 ? result = 'Black' : result = null;
+
+    return result;
+
+}
+
 export async function addCard(playerHand = 'p1hand') {
 
-    var hand = document.getElementById(playerHand);
+    var hand = document.getElementById(playerHand); 
 
     if (hand.children.length < 7) {
 
         var newCard = createCard();
-    
+        
         var cardBody = document.createElement("div");
+        
+        if (wildCard() == 'Black') {
+
+            newCard = createCard('Black');
+
+            newCard.power += 5;
+
+            cardBody.style.color = 'Yellow';
+
+        }
     
         cardBody.addEventListener("click", (e) => { handleStage(e.target)});
     
@@ -89,5 +111,9 @@ export function addMany(n,player) {
         n--;
 
     }
+    
+}
+
+export function handleWin() {
     
 }

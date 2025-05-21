@@ -48,7 +48,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 
 #p1hand { background-color: var(--p1) } #p2hand { background-color: var(--p2) }
 
-#p1score { color: var(--p1) } #p2score { color: var(--p2) } .score { font-weight: bold; font-size: 100px }
+#p1score { color: var(--p1) } #p2score { color: var(--p2) } .score { font-weight: bold; font-size: 100px } .scoreboard { z-index: 2 }
 
 .hand { width: 100vw; height: 20vh; display: flex; justify-content: space-evenly; align-items: center }
 
@@ -169,6 +169,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
     .score {
         right: 150%;
+        margin: 30px;
     }
     .panel {
         font-size: 30px;
