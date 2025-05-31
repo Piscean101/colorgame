@@ -19,13 +19,26 @@ battle.addEventListener("click", () => { handleBattle() });
 
 draw.addEventListener("click", () => { handleDraw() });
 
-function cleanStage() { 
+function checkWin() {
+
+    p1score.innerHTML >= 50 ? alert('You win! Wanna play again?') : p1score.innerHTML >= 50 ? alert('You lose! Better luck next time') : null;
+
+}
+
+function cleanStage() {
+
     stages.forEach(e => e.replaceChildren()); 
-    battle.disabled = false; 
-    draw.disabled = false; 
+
+    battle.disabled = false;
+
+    draw.disabled = false;
+
     results.style.opacity = 0;
+
     document.querySelector('body').style.pointerEvents = 'auto';
-    p1score.innerHTML >= 100 ? alert('You win! Wanna play again?') : p1score.innerHTML >= 100 ? alert('You lose! Better luck next time') : null;
+
+    checkWin();
+    
 };
 
 function colorEngine([...p1cards],[...p2cards]) {
@@ -33,8 +46,11 @@ function colorEngine([...p1cards],[...p2cards]) {
     var colorList = new Set();
 
     function colorDiscover(list) {
+
         list.forEach(e => e.forEach(f => colorList.add(f.style.backgroundColor)));
+
         list.forEach(e => {
+
             e.forEach(f => {
                 f.style.backgroundColor == 'red' && colorList.has('purple') ? f.innerHTML = 0 :
                 f.style.backgroundColor == 'skyblue' && colorList.has('red') ? f.innerHTML = 0 :
@@ -42,7 +58,9 @@ function colorEngine([...p1cards],[...p2cards]) {
                 f.style.backgroundColor == 'gold' && colorList.has('lime') ? f.innerHTML = 0 :
                 f.style.backgroundColor == 'purple' && colorList.has('gold') ? f.innerHTML = 0 : null
             })
+
         })
+
     }
 
     colorDiscover([...p1cards,...p2cards])

@@ -56,7 +56,7 @@ export function wildCard() {
 
     let chances = Math.random()*10;
 
-    chances <= 0.5 ? result = 'Black' : result = null;
+    chances <= 0.3 ? result = 'Black' : result = null;
 
     return result;
 
@@ -111,9 +111,5 @@ export function addMany(n,player) {
         n--;
 
     }
-    
-}
-
-export function handleWin() {
     
 }
