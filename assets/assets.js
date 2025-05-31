@@ -4,7 +4,7 @@ export class Card {
         this.color = color;
         this.power = power;
         Card.cardId++;
-        this.id = Card.cardId;
+        this.id = [this.color,Card.cardId];
         this.inHand = true;
     }
 
@@ -88,7 +88,9 @@ export async function addCard(playerHand = 'p1hand') {
     
         cardBody.innerHTML = newCard.power;
     
-        cardBody.style.backgroundColor = newCard.color;
+        playerHand == 'p1hand' ? cardBody.style.backgroundColor = newCard.color : null;
+
+        cardBody.id = newCard.id;
     
         cardBody.classList.add('card');
     

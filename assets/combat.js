@@ -65,16 +65,19 @@ function colorEngine([...p1cards],[...p2cards]) {
 
     function colorDiscover(list) {
 
-        list.forEach(e => e.forEach(f => colorList.add(f.style.backgroundColor)));
+        list.forEach(e => e.forEach(f => { f.classList.remove('facedown'); f.classList.add(f.id.split(',')[0]); console.log(f.classList); colorList.add(f.classList[1])}));
+
+        console.log(colorList.values())
 
         list.forEach(e => {
 
             e.forEach(f => {
-                f.style.backgroundColor == 'red' && colorList.has('purple') ? f.innerHTML = 0 :
-                f.style.backgroundColor == 'skyblue' && colorList.has('red') ? f.innerHTML = 0 :
-                f.style.backgroundColor == 'lime' && colorList.has('skyblue') ? f.innerHTML = 0 :
-                f.style.backgroundColor == 'gold' && colorList.has('lime') ? f.innerHTML = 0 :
-                f.style.backgroundColor == 'purple' && colorList.has('gold') ? f.innerHTML = 0 : null
+                console.log(f.classList[1]);
+                f.classList[1] == 'Red' && colorList.has('Purple') ? f.innerHTML = 0 :
+                f.classList[1] == 'Skyblue' && colorList.has('Red') ? f.innerHTML = 0 :
+                f.classList[1] == 'Lime' && colorList.has('Skyblue') ? f.innerHTML = 0 :
+                f.classList[1] == 'Gold' && colorList.has('Lime') ? f.innerHTML = 0 :
+                f.classList[1] == 'Purple' && colorList.has('Gold') ? f.innerHTML = 0 : null
             })
 
         })
