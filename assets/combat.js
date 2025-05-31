@@ -21,7 +21,25 @@ draw.addEventListener("click", () => { handleDraw() });
 
 function checkWin() {
 
-    p1score.innerHTML >= 50 ? alert('You win! Wanna play again?') : p1score.innerHTML >= 50 ? alert('You lose! Better luck next time') : null;
+    var winCon = 50;
+
+    function playerWins() {
+
+        alert('You win! Nice job!');
+
+        setTimeout(() => { window.location.reload() }, 3000);
+        
+    }
+
+    function cpuWins() {
+
+        alert('You lose. Better luck next time.');
+
+        setTimeout(() => { window.location.reload() }, 3000);
+
+    }
+
+    p1score.innerHTML >= winCon ? playerWins() : p1score.innerHTML >= winCon ? cpuWins() : null;
 
 }
 
