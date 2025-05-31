@@ -151,12 +151,18 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 }
 
 @media only screen and (max-width: 500px) {
+    .combat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #p1hand{
         position: absolute;
         bottom: 0;
     }
     .hand { 
         max-height: 10vh;
+        padding: 3px;
     }
     .controls {
         max-height: 10vh;
@@ -178,7 +184,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
     .score {
         right: 150%;
-        margin: 150px;
+        margin: 300px;
     }
     .panel {
         font-size: 30px;

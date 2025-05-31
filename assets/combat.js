@@ -27,7 +27,7 @@ function checkWin() {
 
         alert('You win! Nice job!');
 
-        setTimeout(() => { window.location.reload() }, 3000);
+        setTimeout(() => { window.location.reload() }, 1000);
         
     }
 
@@ -35,7 +35,7 @@ function checkWin() {
 
         alert('You lose. Better luck next time.');
 
-        setTimeout(() => { window.location.reload() }, 3000);
+        setTimeout(() => { window.location.reload() }, 1000);
 
     }
 
