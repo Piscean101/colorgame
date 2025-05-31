@@ -151,10 +151,8 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 }
 
 @media only screen and (max-width: 500px) {
-    .combat {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .play { 
+        right: 20px;
     }
     #p1hand{
         position: absolute;
