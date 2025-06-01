@@ -1,4 +1,4 @@
-import { createCard, addCard, handleStage } from "./assets.js";
+import { handleStage, addCard } from "./assets.js";
 import { handleStageCPU } from "./cpu.js";
 
 const playerstages = document.querySelectorAll('.pstage'); const enemystages = document.querySelectorAll('.estage');
@@ -19,38 +19,30 @@ battle.addEventListener("click", () => { handleBattle() });
 
 draw.addEventListener("click", () => { handleDraw() });
 
-function checkWin() {
+export function checkWin() {
 
     var winCon = 50;
 
-    function playerWins() {
+    function playerWins() { alert('You win! Nice job!'); setTimeout(() => { window.location.reload(); location.reload(true) }, 1000); }
 
-        alert('You win! Nice job!');
+    function cpuWins() { alert('You lose. Wanna try again?'); setTimeout(() => { window.location.reload(); location.reload(true) }, 1000); }
 
-        setTimeout(() => { window.location.reload(); location.reload(true) }, 1000);
-        
-    }
+    function tie() { alert(`It's a tie! Wanna play again?`); setTimeout(() => { window.location.reload(); location.reload(true) }, 1000); }
 
-    function cpuWins() {
-
-        alert('You lose. Better luck next time.');
-
-        setTimeout(() => { window.location.reload(); location.reload(true) }, 1000);
-
-    }
-
-    p1score.innerHTML >= winCon ? playerWins() : p2score.innerHTML >= winCon ? cpuWins() : null;
+    p1score.innerHTML >= winCon && p2score.innerHTML >= winCon ? tie() : p1score.innerHTML >= winCon ? playerWins() : p2score.innerHTML >= winCon ? cpuWins() : null;
 
 }
 
-function cleanStage() {
+export function cleanStage() {
 
     stages.forEach(e => e.replaceChildren()); 
 
-    battle.disabled = false;
+    // battle.disabled = false;
 
-    draw.disabled = false;
-
+    setTimeout(() => {
+        draw.disabled = false;
+    },500);
+    
     results.style.opacity = 0;
 
     document.querySelector('body').style.pointerEvents = 'auto';
@@ -59,20 +51,17 @@ function cleanStage() {
     
 };
 
-function colorEngine([...p1cards],[...p2cards]) {
+export function colorEngine([...p1cards],[...p2cards]) {
 
     var colorList = new Set();
 
     function colorDiscover(list) {
 
-        list.forEach(e => e.forEach(f => { f.classList.remove('facedown'); f.classList.add(f.id.split(',')[0]); console.log(f.classList); colorList.add(f.classList[1])}));
-
-        console.log(colorList.values())
+        list.forEach(e => e.forEach(f => { f.classList.remove('facedown'); f.classList.add(f.id.split(',')[0]); colorList.add(f.classList[1])}));
 
         list.forEach(e => {
 
             e.forEach(f => {
-                console.log(f.classList[1]);
                 f.classList[1] == 'Red' && colorList.has('Purple') ? f.innerHTML = 0 :
                 f.classList[1] == 'Skyblue' && colorList.has('Red') ? f.innerHTML = 0 :
                 f.classList[1] == 'Lime' && colorList.has('Skyblue') ? f.innerHTML = 0 :
@@ -90,7 +79,7 @@ function colorEngine([...p1cards],[...p2cards]) {
 
 }
 
-function calculateBattle() {
+export function calculateBattle() {
 
     var[p1,p2] = [0,0]; var[playerq,enemyq] = [[],[]];
 

@@ -1,4 +1,4 @@
-import { handleStage, addCard } from "./assets.js";
+import { addCard } from "./assets.js";
 
 export async function handleStageCPU() {
     

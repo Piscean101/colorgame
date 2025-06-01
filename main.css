@@ -98,7 +98,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 
 .resultbox { background-color: var(--smoke); width: 60px; height: 75px; display: flex; justify-content: center; align-items: center }
 
-.facedown { background-color: var(--facedown); color: var(--facedown) }
+.facedown { background-color: var(--facedown); color: transparent }
 
 .purple, .Purple { background-color: purple }
 
@@ -127,7 +127,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
     .log {
         width: 75vw;
     }
@@ -135,9 +135,6 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         padding: 15px 25px;
         font-size: 60px;
     }
-}
-
-@media only screen and (max-width: 700px) {
     .board {
         position: relative;
         left: 10%;
@@ -167,9 +164,6 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         padding: 10px 20px;
         font-size: 40px;
     }
-}
-
-@media only screen and (max-width: 500px) {
     .board { 
         right: 20px;
     }
@@ -186,7 +180,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         position: relative;
     }
     #pcontrols {
-        top: 20%;
+        top: 25%;
     }
     .log {
         position: absolute;
@@ -211,7 +205,11 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     .scoreboard {
         position: relative;
         bottom: 20px;
+        left: 5vw;
     }
     #p1score { margin-right: 25vw }
     .panel { font-size: 30px }
 } 
+@media only screen and (max-width: 350px) {
+    .scoreboard { left: -10vw }
+}

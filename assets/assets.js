@@ -10,11 +10,37 @@ export class Card {
 
 }
 
+function createCard(color) {
+
+    var power = Math.ceil(Math.random()*5);
+
+    var card = new Card(color || randomColor(),power);
+
+    return card;
+
+}
+
+function wildCard() {
+
+    let result;
+
+    let chances = Math.random()*10;
+
+    chances <= 0.3 ? result = 'Black' : result = null;
+
+    return result;
+
+}
+
 export function handleStage(card,target='.pstage') {
 
     if (card.classList.contains('inHand')) {
 
         var stages = [document.querySelectorAll(target)];
+
+        const battle = document.getElementById('battle');
+
+        battle.disabled = false;
 
         !stages[0][0].hasChildNodes() ? stages[0][0].appendChild(card) : !stages[0][1].hasChildNodes() ? stages[0][1].appendChild(card) : null;
 
@@ -40,28 +66,6 @@ export function randomColor() {
 
 }
 
-export function createCard(color) {
-
-    var power = Math.ceil(Math.random()*5);
-
-    var card = new Card(color || randomColor(),power);
-
-    return card;
-
-}
-
-export function wildCard() {
-
-    let result;
-
-    let chances = Math.random()*10;
-
-    chances <= 0.3 ? result = 'Black' : result = null;
-
-    return result;
-
-}
-
 export async function addCard(playerHand = 'p1hand') {
 
     var hand = document.getElementById(playerHand); 
@@ -77,8 +81,6 @@ export async function addCard(playerHand = 'p1hand') {
             newCard = createCard('Black');
 
             newCard.power += 5;
-
-            // cardBody.style.color = 'Yellow';
 
         }
     
