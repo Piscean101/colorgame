@@ -152,7 +152,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         justify-content: space-between;
         position: relative;
         bottom: 60%;
-        right: 200%;
+        right: 140%;
     }
     .play p {
         margin: 20px 0px;
@@ -178,7 +178,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         bottom: 0;
     }
     .hand { 
-        max-height: 12vh;
+        max-height: 14vh;
         padding: 3px;
     }
     .controls {
@@ -189,13 +189,20 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         top: 20%;
     }
     .log {
-        position: relative;
-        bottom: 30px;
+        position: absolute;
+        right: 0;
         width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+    .results {
+        position: relative;
+        bottom: 8vh;
+        align-self: center;
     }
     .board {
         position: relative;
-        left: 5%;
+        left: 15%;
     }
     .card {
         min-width: 40px;
@@ -203,17 +210,8 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     }
     .scoreboard {
         position: relative;
-        right: 150%;
-        bottom: 10px;
-        font-size: 150%;
+        bottom: 20px;
     }
-    #p1score {
-        right: 15px;
-    }
-    #p2score {
-        left: 15px;
-    }
-    .panel {
-        font-size: 30px;
-    }
+    #p1score { margin-right: 25vw }
+    .panel { font-size: 30px }
 } 
