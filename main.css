@@ -34,6 +34,8 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     box-shadow: 0px 0px 7px 1px grey;
     min-width: 70px; 
     height: 100px; 
+    font-size: 150%;
+    color: rgba(255, 255, 255, 0.85);
     display: flex; 
     justify-content: center;
     align-items: center }
@@ -176,7 +178,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         bottom: 0;
     }
     .hand { 
-        max-height: 10vh;
+        max-height: 12vh;
         padding: 3px;
     }
     .controls {
@@ -200,7 +202,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
     .score {
         position: relative;
         right: 150%;
-        margin: 50px;
+        margin: 70px;
     }
     .panel {
         font-size: 30px;

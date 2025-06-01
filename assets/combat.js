@@ -27,7 +27,7 @@ function checkWin() {
 
         alert('You win! Nice job!');
 
-        setTimeout(() => { window.location.reload() }, 1000);
+        setTimeout(() => { window.location.reload(); location.reload(true) }, 1000);
         
     }
 
@@ -35,11 +35,11 @@ function checkWin() {
 
         alert('You lose. Better luck next time.');
 
-        setTimeout(() => { window.location.reload() }, 1000);
+        setTimeout(() => { window.location.reload(); location.reload(true) }, 1000);
 
     }
 
-    p1score.innerHTML >= winCon ? playerWins() : p1score.innerHTML >= winCon ? cpuWins() : null;
+    p1score.innerHTML >= winCon ? playerWins() : p2score.innerHTML >= winCon ? cpuWins() : null;
 
 }
 
