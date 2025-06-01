@@ -37,9 +37,9 @@ export function cleanStage() {
 
     stages.forEach(e => e.replaceChildren()); 
 
-    // battle.disabled = false;
-
+    
     setTimeout(() => {
+        battle.disabled = false;
         draw.disabled = false;
     },500);
     
