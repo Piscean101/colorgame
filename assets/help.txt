@@ -29,7 +29,7 @@ Green counters Yellow
 Yellow counters Purple
 Purple counters Red
 
-Wild cards are special rare cards with higher values than regular cards. Wild cards cannot counter or be countered by other colors. 
+Wild cards are special rare cards with a higher, but hidden value. Wild cards cannot counter or be countered by other colors. 
 
 CALCULATION
 

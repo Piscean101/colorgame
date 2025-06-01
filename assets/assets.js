@@ -78,7 +78,7 @@ export async function addCard(playerHand = 'p1hand') {
 
             newCard.power += 5;
 
-            cardBody.style.color = 'Yellow';
+            // cardBody.style.color = 'Yellow';
 
         }
     

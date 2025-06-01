@@ -108,7 +108,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 
 .skyblue, .Skyblue { background-color: skyblue }
 
-.black, .Black { background-color: black }
+.black, .Black { background-color: black; color: yellow }
 
 @media only screen and (max-width: 1200px) {
   .log {
@@ -194,13 +194,13 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
         left: 20%;
     }
     .card {
-        min-width: 35px;
-        height: 70px;
+        min-width: 40px;
+        height: 85px;
     }
     .score {
         position: relative;
         right: 150%;
-        padding: 15px;
+        margin: 50px;
     }
     .panel {
         font-size: 30px;
