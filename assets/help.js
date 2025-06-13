@@ -1,47 +1,24 @@
-const help = 
+const help = `
+Player (You) is the blue hand | Opponent (CPU) is the pink hand
+Maximum hand size is 7 cards
 
-`** WELCOME **
+Choose up to 2 of your cards to add to the stage. Then choose "BATTLE!" to reveal your opponent's stage and calculate the results. You may draw an additional card for your turn instead of contesting the stage.
 
-HOW TO PLAY
+Each card has a point value and color value. Each of the 5 colors counters another color, reducing the points both players recieves from card(s) of that color to 0 for the round. 
+Red > Blue > Green > Yellow > Purple > Red
 
-Player (You) is the blue side
-Opponent (CPU) is the pink side
+Black cards cannot counter or be countered by other colors. 
 
-At the beginning of each round, after drawing your first card for the turn, you and your opponent may choose up to 2 cards to add to the stage 
-from your hand. Once your selection is complete, choose "BATTLE!" to reveal your opponent's staged cards and calculate the results.
-
-DRAW
-
-Once per turn, you or your opponent may choose to draw an additional card for your turn instead of contesting the stage.
-
-COLORS 
-
-Each card has a point value and color value. Each of the 5 colors counters another color, reducing the points both players recieves from card(s)
-of that color to 0 for the round. 
-Red counters Blue
-Blue counters Green
-Green counters Yellow
-Yellow counters Purple
-Purple counters Red
-
-Wild cards are special rare cards with a higher, but hidden value. Wild cards cannot counter or be countered by other colors. 
-
-CALCULATION
-
-i. Numbers 
-    + If a card was not countered, its player may gain points equal to its value.
-
-ii. Colors
-    + Playing 2 cards of the same color together will grant the player 2x points for that round.
+If a card was not countered, its player wins those points.
 
 example: 
 
 (3,Blue) VS (1,Blue) (2,Red) = +0 VS +2
 
-(1,Green) (1,Green) VS (1,Yellow) (5,Purple) = +4 VS +5
+(1,Green) (1,Green) VS (1,Yellow) (5,Red) = +2 VS +5
 
-HOW TO WIN 
+THE FIRST PLAYER TO 50 POINTS WINS!
 
-The player with the most points on the scoreboard after the last round wins!`;
+`;
 
 export { help };
