@@ -67,6 +67,22 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 
 .hand .card { margin: 0px 0px }
 
+#help {
+    position: absolute;
+    color: white;
+    border: 4px white solid;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#help:hover { cursor: pointer }
+
 .play { 
     border: 1px solid white;
     width: 33vw;
