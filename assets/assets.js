@@ -1,3 +1,9 @@
+import { help } from './help.js';
+
+const helpButton = document.getElementById('help');
+
+helpButton.addEventListener('click', () => { alert(help) })
+
 export class Card {
     static cardId = 0;
     constructor(color,power) {

@@ -1,4 +1,6 @@
-** WELCOME **
+const help = 
+
+`** WELCOME **
 
 HOW TO PLAY
 
@@ -40,4 +42,6 @@ example:
 
 HOW TO WIN 
 
-The player with the most points on the scoreboard after the last round wins!
+The player with the most points on the scoreboard after the last round wins!`;
+
+export { help };
