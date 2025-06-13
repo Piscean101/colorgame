@@ -3,11 +3,19 @@ import { handleBattle } from "./assets/combat.js";
 import { addCard, addMany } from "./assets/assets.js";
 import { handleStageCPU } from "./assets/cpu.js";
 
-// try { window.screen.orientation.lock("portrait-primary"); }
+// try { screen.orientation.lock("portrait"); }
 
-// catch { }
+// catch { console.log('orientation lock not supported') }
 
-screen.orientation.lock("portrait");
+async function lockOrientation(orientation) {
+    try {
+        await document.documentElement.requestFullscreen();
+        await screen.orientation.lock(orientation);
+        console.log("Screen orientation locked to " + orientation);
+    } catch (error) {
+        console.error("Failed to lock screen orientation:", error);
+    }
+}
 
 function startGame() {
 
@@ -20,3 +28,14 @@ function startGame() {
 }
 
 startGame();
+window.addEventListener('load', () => {
+    async function lockOrientation(orientation) {
+    try {
+        await window.screen.orientation.lock(orientation);
+        console.log("Screen orientation locked to " + orientation);
+    } catch (error) {
+        console.error("Failed to lock screen orientation:", error);
+    }
+}
+lockOrientation('portrait')
+})

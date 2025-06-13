@@ -147,6 +147,7 @@ body { margin: none; padding: none; overflow: hidden; font-family: Impact }
 }
 
 @media only screen and (max-width: 750px) {
+    #help { width: 30px }
     .log {
         width: 75vw;
     }
