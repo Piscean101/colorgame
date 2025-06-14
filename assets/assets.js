@@ -32,7 +32,7 @@ function wildCard() {
 
     let chances = Math.random()*10;
 
-    chances <= 0.3 ? result = 'Black' : result = null;
+    chances <= 0.2 ? result = 'Black' : result = null;
 
     return result;
 
