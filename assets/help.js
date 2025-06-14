@@ -2,14 +2,14 @@ const help = `
 Player (You) is the blue hand | Opponent (CPU) is the pink hand
 Maximum hand size is 7 cards
 
-Choose up to 2 of your cards to add to the stage. Then choose "BATTLE!" to reveal your opponent's stage and calculate the results. You may draw an additional card for your turn instead of contesting the stage.
+Choose up to 2 of your cards to add to the stage. Then choose "BATTLE!" to reveal your opponent's stage and calculate the results. You may draw an additional card for your turn instead of contesting the stage
 
-Each card has a point value and color value. Each of the 5 colors counters another color, reducing the points both players recieves from card(s) of that color to 0 for the round. 
+Each card has a point value and color value. Each of the 5 colors counters another color; reducing the points BOTH players recieve from card(s) of that color to 0 for that round
 Red > Blue > Green > Yellow > Purple > Red
 
-Black cards cannot counter or be countered by other colors. 
+Black cards cannot counter or be countered by other colors
 
-If a card was not countered, its player wins those points.
+If a card was not countered, its player wins those points
 
 example: 
 
