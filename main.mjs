@@ -28,7 +28,8 @@ function startGame() {
 }
 
 startGame();
-window.addEventListener('load', () => {
+
+// window.addEventListener('load', () => {
 //     async function lockOrientation(orientation) {
 //     try {
 //         await window.screen.orientation.lock(orientation);
@@ -38,15 +39,17 @@ window.addEventListener('load', () => {
 //     }
 // }
 // lockOrientation('portrait')
-if (screen.orientation && screen.orientation.lock) {
-  screen.orientation.lock('portrait-primary')
-    .then(() => {
-      console.log('Screen orientation locked to portrait.');
-    })
-    .catch(error => {
-      console.warn('Failed to lock screen orientation:', error);
-    });
-} else {
-  console.warn('Screen orientation lock is not supported on this device.');
-}
-})
+// if (screen.orientation && screen.orientation.lock('portrait-primary')) {
+//   screen.orientation.lock('portrait-primary')
+//     .then(() => {
+//       console.log('Screen orientation locked to portrait.');
+//     })
+//     .catch(error => {
+//       console.warn('Failed to lock screen orientation:', error);
+//     });
+// } else {
+//   console.warn('Screen orientation lock is not supported on this device.');
+// }
+// })
+
+screen.orientation.lock('portrait-primary').catch(e => { console.log('Screen orientation lock not supported by this device') });
