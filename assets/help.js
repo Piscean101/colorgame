@@ -12,12 +12,12 @@ Black cards cannot counter or be countered by other colors
 If a card was not countered, its player wins those points
 
 example: 
-
 (3,Blue) VS (1,Blue) (2,Red) = +0 VS +2
-
 (1,Green) (1,Green) VS (1,Yellow) (5,Red) = +2 VS +5
 
 THE FIRST PLAYER TO 50 POINTS WINS!
+
+Note: Landscape orientation is not fully supported at this time
 
 `;
 
